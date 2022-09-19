@@ -2,25 +2,38 @@ import React, {useState, useRef} from 'react';
 import {
   View,
   Text,
+  Button,
+  Alert,
   StyleSheet,
   ImageBackground,
   TouchableOpacity,
 } from 'react-native';
-import {Button, TextInput} from 'react-native-paper';
-import PhoneInput from 'react-native-phone-input';
+import {TextInput} from 'react-native-paper';
+import auth from '@react-native-firebase/auth';
 
 const LoginScreen = ({navigation}) => {
   const [phone, setPhone] = useState('');
   const phoneInput = useRef(null);
-  const buttonPress = () => {
-    alert(phoneInput + '' + phone);
-  };
+  const [code, setCode] = useState('');
+  const [confirmData, setConfirmData] = useState('');
 
-  const register = () => {
-    navigation.navigate('VerifyNumber', {
-      country_code: '+' + 91,
-      number: phone,
-    });
+  const sendOtp = async () => {
+    try {
+      if (!code.match('[0-9]{10}')) {
+        alert('Please provide valid code');
+      } else if (!phone.match('[0-9]{10}')) {
+        alert('Please provide valid phone number');
+      } else {
+        const mobile = '+' + code + phone;
+        const response = await auth().signInWithPhoneNumber(mobile);
+        setConfirmData(response);
+        console.log(response);
+        alert('Otp Is Sent Please Verify It...');
+        navigation.navigate('VerifyNumber');
+      }
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
@@ -37,15 +50,17 @@ const LoginScreen = ({navigation}) => {
               flex: 1,
               justifyContent: 'center',
               alignItems: 'center',
+              width: '20%',
             }}>
-            <PhoneInput
-              ref={phoneInput}
-              defaultCode="IN"
-              layout="first"
-              withShadow
-              autoFocus
-              containerStyle={styles.phoneContainer}
-              textContainerStyle={styles.textInput}
+            <TextInput
+              style={styles.phoneContainer}
+              label="Code"
+              mode="flat"
+              keyboardType="numeric"
+              selectionColor="black"
+              activeUnderlineColor="#aaaaaa"
+              value={code}
+              onChangeText={code => setCode(code)}
             />
           </View>
 
@@ -60,7 +75,7 @@ const LoginScreen = ({navigation}) => {
             onChangeText={phone => setPhone(phone)}
           />
         </View>
-        <TouchableOpacity onPress={register}>
+        <TouchableOpacity onPress={sendOtp}>
           <View style={styles.button}>
             <Text style={{color: 'white', fontSize: 14, fontStyle: 'normal'}}>
               Verify Number
@@ -79,7 +94,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   phoneContainer: {
-    width: '80%',
+    width: '75%',
     height: 50,
     backgroundColor: 'transparent',
   },

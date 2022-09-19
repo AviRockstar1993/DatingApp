@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "770681002750",
+    "project_id": "otp-verification-ad82b",
+    "storage_bucket": "otp-verification-ad82b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:770681002750:android:422494c4b0740fe84c23af",
+        "android_client_info": {
+          "package_name": "com.vectoricons"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "770681002750-pf5fatqe1trpf22c1kemvjviog6095ih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjblktlwbxwFVGHv4sL376dfd8h5-CcbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "770681002750-pf5fatqe1trpf22c1kemvjviog6095ih.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
