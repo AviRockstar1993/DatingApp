@@ -8,13 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* VectorIconsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* VectorIconsTests.m */; };
-		0C80B921A6F3F58F76C31292 /* libPods-VectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-VectorIcons.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		18186C7728D4F82300BE05B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18186C7628D4F82300BE05B8 /* GoogleService-Info.plist */; };
+		18186C7A28D4FA2B00BE05B8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 18186C7928D4FA2B00BE05B8 /* FirebaseAnalytics */; };
+		18186C7C28D4FA2B00BE05B8 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 18186C7B28D4FA2B00BE05B8 /* FirebaseAnalyticsOnDeviceConversion */; };
+		18186C7E28D4FA2B00BE05B8 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 18186C7D28D4FA2B00BE05B8 /* FirebaseAnalyticsSwift */; };
+		18186C8028D4FA2B00BE05B8 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 18186C7F28D4FA2B00BE05B8 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		18186C8228D4FA2B00BE05B8 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 18186C8128D4FA2B00BE05B8 /* FirebaseAppCheck */; };
+		18186C8428D4FA2B00BE05B8 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 18186C8328D4FA2B00BE05B8 /* FirebaseAppDistribution-Beta */; };
 		18ED2C5628D1EEA300C5A85B /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 18ED2C5528D1EEA300C5A85B /* Fonts */; };
-		7699B88040F8A987B510C191 /* libPods-VectorIcons-VectorIconsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-VectorIcons-VectorIconsTests.a */; };
+		38FD3512F094227741D9B066 /* Pods_VectorIcons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF5026C52DC5982CB931DA8 /* Pods_VectorIcons.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		F3476407821FE0F1190BB93F /* Pods_VectorIconsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63DA0EBEAE35D99EBEA4CCA7 /* Pods_VectorIconsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +44,15 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = VectorIcons/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = VectorIcons/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = VectorIcons/main.m; sourceTree = "<group>"; };
+		18186C7628D4F82300BE05B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		18ED2C5528D1EEA300C5A85B /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
-		19F6CBCC0A4E27FBF8BF4A61 /* libPods-VectorIcons-VectorIconsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VectorIcons-VectorIconsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-VectorIcons.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VectorIcons.debug.xcconfig"; path = "Target Support Files/Pods-VectorIcons/Pods-VectorIcons.debug.xcconfig"; sourceTree = "<group>"; };
+		413846E888BDE7C36CEBD3A7 /* Pods-VectorIconsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VectorIconsTests.release.xcconfig"; path = "Target Support Files/Pods-VectorIconsTests/Pods-VectorIconsTests.release.xcconfig"; sourceTree = "<group>"; };
+		4339CD896CEE9A2782809C4D /* Pods-VectorIconsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VectorIconsTests.debug.xcconfig"; path = "Target Support Files/Pods-VectorIconsTests/Pods-VectorIconsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-VectorIcons.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VectorIcons.release.xcconfig"; path = "Target Support Files/Pods-VectorIcons/Pods-VectorIcons.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-VectorIcons-VectorIconsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VectorIcons-VectorIconsTests.debug.xcconfig"; path = "Target Support Files/Pods-VectorIcons-VectorIconsTests/Pods-VectorIcons-VectorIconsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5DCACB8F33CDC322A6C60F78 /* libPods-VectorIcons.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VectorIcons.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EF5026C52DC5982CB931DA8 /* Pods_VectorIcons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VectorIcons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		63DA0EBEAE35D99EBEA4CCA7 /* Pods_VectorIconsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VectorIconsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = VectorIcons/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-VectorIcons-VectorIconsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VectorIcons-VectorIconsTests.release.xcconfig"; path = "Target Support Files/Pods-VectorIcons-VectorIconsTests/Pods-VectorIcons-VectorIconsTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -53,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7699B88040F8A987B510C191 /* libPods-VectorIcons-VectorIconsTests.a in Frameworks */,
+				F3476407821FE0F1190BB93F /* Pods_VectorIconsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +71,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C80B921A6F3F58F76C31292 /* libPods-VectorIcons.a in Frameworks */,
+				18186C8428D4FA2B00BE05B8 /* FirebaseAppDistribution-Beta in Frameworks */,
+				18186C7E28D4FA2B00BE05B8 /* FirebaseAnalyticsSwift in Frameworks */,
+				18186C8028D4FA2B00BE05B8 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				18186C7A28D4FA2B00BE05B8 /* FirebaseAnalytics in Frameworks */,
+				18186C7C28D4FA2B00BE05B8 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				18186C8228D4FA2B00BE05B8 /* FirebaseAppCheck in Frameworks */,
+				38FD3512F094227741D9B066 /* Pods_VectorIcons.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +111,7 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				18186C7628D4F82300BE05B8 /* GoogleService-Info.plist */,
 			);
 			name = VectorIcons;
 			sourceTree = "<group>";
@@ -103,8 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				5DCACB8F33CDC322A6C60F78 /* libPods-VectorIcons.a */,
-				19F6CBCC0A4E27FBF8BF4A61 /* libPods-VectorIcons-VectorIconsTests.a */,
+				5EF5026C52DC5982CB931DA8 /* Pods_VectorIcons.framework */,
+				63DA0EBEAE35D99EBEA4CCA7 /* Pods_VectorIconsTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,6 +164,8 @@
 				5709B34CF0A7D63546082F79 /* Pods-VectorIcons.release.xcconfig */,
 				5B7EB9410499542E8C5724F5 /* Pods-VectorIcons-VectorIconsTests.debug.xcconfig */,
 				89C6BE57DB24E9ADA2F236DE /* Pods-VectorIcons-VectorIconsTests.release.xcconfig */,
+				4339CD896CEE9A2782809C4D /* Pods-VectorIconsTests.debug.xcconfig */,
+				413846E888BDE7C36CEBD3A7 /* Pods-VectorIconsTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -162,8 +181,6 @@
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */,
-				F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,14 +202,20 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
-				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = VectorIcons;
+			packageProductDependencies = (
+				18186C7928D4FA2B00BE05B8 /* FirebaseAnalytics */,
+				18186C7B28D4FA2B00BE05B8 /* FirebaseAnalyticsOnDeviceConversion */,
+				18186C7D28D4FA2B00BE05B8 /* FirebaseAnalyticsSwift */,
+				18186C7F28D4FA2B00BE05B8 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				18186C8128D4FA2B00BE05B8 /* FirebaseAppCheck */,
+				18186C8328D4FA2B00BE05B8 /* FirebaseAppDistribution-Beta */,
+			);
 			productName = VectorIcons;
 			productReference = 13B07F961A680F5B00A75B9A /* VectorIcons.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +246,9 @@
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
+			packageReferences = (
+				18186C7828D4FA2B00BE05B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -246,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18ED2C5628D1EEA300C5A85B /* Fonts in Resources */,
+				18186C7728D4F82300BE05B8 /* GoogleService-Info.plist in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
@@ -270,23 +297,6 @@
 			shellPath = /bin/sh;
 			shellScript = "set -e\n\nWITH_ENVIRONMENT=\"../node_modules/react-native/scripts/xcode/with-environment.sh\"\nREACT_NATIVE_XCODE=\"../node_modules/react-native/scripts/react-native-xcode.sh\"\n\n/bin/sh -c \"$WITH_ENVIRONMENT $REACT_NATIVE_XCODE\"\n";
 		};
-		00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VectorIcons/Pods-VectorIcons-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VectorIcons/Pods-VectorIcons-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VectorIcons/Pods-VectorIcons-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -302,7 +312,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VectorIcons-VectorIconsTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-VectorIconsTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -329,57 +339,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C59DA0FBD6956966B86A3779 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VectorIcons-VectorIconsTests/Pods-VectorIcons-VectorIconsTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VectorIcons-VectorIconsTests/Pods-VectorIcons-VectorIconsTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VectorIcons-VectorIconsTests/Pods-VectorIcons-VectorIconsTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VectorIcons/Pods-VectorIcons-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VectorIcons/Pods-VectorIcons-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VectorIcons/Pods-VectorIcons-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VectorIcons-VectorIconsTests/Pods-VectorIcons-VectorIconsTests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VectorIcons-VectorIconsTests/Pods-VectorIcons-VectorIconsTests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VectorIcons-VectorIconsTests/Pods-VectorIcons-VectorIconsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -434,7 +393,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-VectorIcons-VectorIconsTests.debug.xcconfig */;
+			baseConfigurationReference = 4339CD896CEE9A2782809C4D /* Pods-VectorIconsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -461,7 +420,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-VectorIcons-VectorIconsTests.release.xcconfig */;
+			baseConfigurationReference = 413846E888BDE7C36CEBD3A7 /* Pods-VectorIconsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -701,6 +660,50 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18186C7828D4FA2B00BE05B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18186C7928D4FA2B00BE05B8 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18186C7828D4FA2B00BE05B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		18186C7B28D4FA2B00BE05B8 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18186C7828D4FA2B00BE05B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		18186C7D28D4FA2B00BE05B8 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18186C7828D4FA2B00BE05B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		18186C7F28D4FA2B00BE05B8 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18186C7828D4FA2B00BE05B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		18186C8128D4FA2B00BE05B8 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18186C7828D4FA2B00BE05B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		18186C8328D4FA2B00BE05B8 /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18186C7828D4FA2B00BE05B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
 }
