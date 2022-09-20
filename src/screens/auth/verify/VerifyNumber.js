@@ -1,5 +1,12 @@
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import React, {useState} from 'react';
+import {
+  Alert,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  Keyboard,
+} from 'react-native';
+import React, {useState, useEffect} from 'react';
 import LinearGradient from 'react-native-linear-gradient';
 import {
   CodeField,
@@ -16,6 +23,7 @@ import {
 import {Primary, White} from '../../../helpers/color';
 import {med} from '../../../helpers/fontSize';
 import Btn from '../../../props/button/btn';
+import RNOtpVerify from 'react-native-otp-verify';
 
 const CELL_COUNT = 6;
 
@@ -27,6 +35,21 @@ const VerifyNumber = ({navigation, route}) => {
     setValue,
   });
   const {phone} = route.params;
+
+  useEffect(() => {
+    RNOtpVerify.getHash().then(console.log).catch(console.log);
+
+    RNOtpVerify.getOtp()
+      .then(p => RNOtpVerify.addListener(otpHandler))
+      .catch(p => console.log(p));
+  }, []);
+
+  const otpHandler = message => {
+    const otp = /(\d{4})/g.exec(message)[1];
+    setValue({otp});
+    RNOtpVerify.removeListener();
+    Keyboard.dismiss();
+  };
   return (
     <LinearGradient colors={['#114357', '#f29492']} style={styles.VerifyView}>
       <View style={styles.OtpText}>
@@ -58,7 +81,10 @@ const VerifyNumber = ({navigation, route}) => {
         />
 
         <View style={styles.loginBtn}>
-          <Btn text="Verify" />
+          <Btn
+            text="Verify"
+            onPress={() => Alert.alert('Otp fetched successfully')}
+          />
         </View>
       </View>
     </LinearGradient>

@@ -21,16 +21,22 @@ import {
 } from 'react-native-responsive-screen';
 import Btn from '../../../props/button/btn';
 import {med} from '../../../helpers/fontSize';
+import auth from '@react-native-firebase/auth';
 
 const LoginScreen = ({navigation}) => {
   const [phone, setphone] = useState('');
   const [code, setCode] = useState('+' + 91);
+  const [confirmData, setConfirmData] = useState('');
 
   const LoginBtn = phone => {
     if (phone.length === 10) {
+      const mobile = '+' + code + phone;
+      const response = auth().signInWithPhoneNumber(mobile);
+      setConfirmData(response);
       navigation.navigate('VerifyNumber', {
         phone: code + phone,
       });
+      Alert.alert('Otp Is Sent Please Verify It...');
     } else if (phone.length === '' || null || undefined) {
       Alert.alert('Please Enter The  Number');
     } else {
