@@ -21,15 +21,30 @@ import {
 } from 'react-native-responsive-screen';
 import Btn from '../../../props/button/btn';
 import {med} from '../../../helpers/fontSize';
+import auth from '@react-native-firebase/auth';
+import {useSelector, useDispatch} from 'react-redux';
+
+import {DatingAction} from '../../../redux/slice';
 
 const LoginScreen = ({navigation}) => {
   const [phone, setphone] = useState('');
   const [code, setCode] = useState('+' + 91);
 
+  const dispatch = useDispatch();
+
+  const signInWithPhoneNumber = async phone => {
+    const confirmation = await auth().signInWithPhoneNumber(phone);
+    // setConfirm(confirmation);
+    dispatch(DatingAction.SetConfrimationOtp(confirmation));
+  };
+
   const LoginBtn = phone => {
     if (phone.length === 10) {
-      navigation.navigate('VerifyNumber', {
-        phone: code + phone,
+      let pnum = code + phone;
+      signInWithPhoneNumber(pnum).then(() => {
+        navigation.navigate('VerifyNumber', {
+          phone: code + phone,
+        });
       });
     } else if (phone.length === '' || null || undefined) {
       Alert.alert('Please Enter The  Number');

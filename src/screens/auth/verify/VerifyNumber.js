@@ -16,10 +16,12 @@ import {
 import {Primary, White} from '../../../helpers/color';
 import {med} from '../../../helpers/fontSize';
 import Btn from '../../../props/button/btn';
+import {useSelector, useDispatch} from 'react-redux';
 
 const CELL_COUNT = 6;
 
 const VerifyNumber = ({navigation, route}) => {
+  const confirm = useSelector(state => state.Dating.confirm);
   const [value, setValue] = useState('');
   const ref = useBlurOnFulfill({value, cellCount: CELL_COUNT});
   const [props, getCellOnLayoutHandler] = useClearByFocusCell({
@@ -27,6 +29,17 @@ const VerifyNumber = ({navigation, route}) => {
     setValue,
   });
   const {phone} = route.params;
+  // console.log('Verify Confrim', confirm);
+
+  const confirmCode = async () => {
+    try {
+      await confirm.confirm(value);
+      navigation.navigate('HomeScreen');
+    } catch (e) {
+      alert('Invalid Code');
+    }
+  };
+
   return (
     <LinearGradient colors={['#114357', '#f29492']} style={styles.VerifyView}>
       <View style={styles.OtpText}>
@@ -58,7 +71,7 @@ const VerifyNumber = ({navigation, route}) => {
         />
 
         <View style={styles.loginBtn}>
-          <Btn text="Verify" />
+          <Btn text="Verify" onPress={() => confirmCode()} />
         </View>
       </View>
     </LinearGradient>
