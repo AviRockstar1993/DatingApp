@@ -45,8 +45,10 @@ const VerifyNumber = ({navigation, route}) => {
   }, []);
 
   const otpHandler = message => {
+    console.log('Message', message);
     const otp = /(\d{4})/g.exec(message)[1];
-    setValue({otp});
+    console.log(otp);
+    setValue(otp);
     RNOtpVerify.removeListener();
     Keyboard.dismiss();
   };
